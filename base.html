@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+                {% load static %}
+<head>
+        {% block title %}
+                <title>Home</title> 
+        {% endblock title %}
+        <link rel="shortcut icon" type="image/png" href="{% static 'website/img/favicon.png' %}"> 
+        <link rel="stylesheet" href="{% static 'website/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'website/css/master.css' %}">
+
+        
+         
+</head>
+<body>
+        
+        
+        <h1>
+        <div>
+                <ul>
+                        <li><a href="{% url 'home' %}">Início</a></li>
+                        <li><a href="{% url 'cadastro' %}">Cadastro Aluno</a></li>
+                        <li><a href="{% url 'professor' %}">Cadastro Professor</a></li>
+                        <li><a href="{% url 'disciplina' %}">Cadastro Disciplina</a></li>
+                </ul>
+        </div> 
+                </h1>
+
+        {% block content %}
+        
+        {% endblock content %}
+		
+		
+</body>
+</html>
